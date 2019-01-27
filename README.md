@@ -1,2 +1,2 @@
 # mapgt-frontend
-The frontend for MapGT
+The 🔥 frontend for MapGT
