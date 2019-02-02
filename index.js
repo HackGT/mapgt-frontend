@@ -4,9 +4,6 @@ const port = 3000;
 
 // html -> get, post, put, delete
 
-app.get('/', (req, res) => {
-  res.sendFile('public/index.html');
-})
-
+app.use('/', express.static('./public'))
 
 app.listen(port, () => console.log(`Listening on ${port}`));
