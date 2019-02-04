@@ -7,35 +7,16 @@
     </head>
     <body>
         <!-- Rounded switch -->
-        <script src="../index.js"></script>
+        <!-- <script src="../index.js"></script> -->
         <label class="switch">
             <input type="checkbox" onclick="toggleFloors()">
             <span class="slider round"></span>
         </label>
 
-        <img
-            id = "floor1"
-            src="../assets/maps/ICF1Edit.svg" 
-            alt="IC Floor 1" />
+        <object id="floor1" type="image/svg+xml" data="assets/maps/ICF1Edit.svg"></object>
+        <object id="floor2" type="image/svg+xml" data="assets/maps/ICF2Edit.svg"></object>
 
-        <img 
-            id = "floor2"
-            src="../assets/maps/ICF2Edit.svg" 
-            alt="IC Floor 2" />
-
-        <script>
-        function toggleFloors() {
-            var top = document.getElementById("floor1");
-            var bottom = document.getElementById("floor2");
-            if (top.style.display === "none") {
-            top.style.display = "block";
-            bottom.style.display = "none";
-            } else {
-            top.style.display = "none";
-            bottom.style.display = "block";
-            }
-        }
-        </script>
+        <script src="util.js"></script>
         
     </body>
 </html>

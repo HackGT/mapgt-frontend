@@ -1270,17 +1270,13 @@
   </g>
   <g class="b">
     <g class="g">
-      <text class="f" transform="translate(458.28 203.2) rotate(-0.14)">
-        <tspan class="u">1</tspan>
-        <tspan x="8.77" y="0">1</tspan>
+      <text class="f" transform="translate(458.28 203.2) rotate(-0.14)">111
       </text>
-      <text class="f" transform="translate(471.13 203.17) rotate(-0.14)">1</text>
     </g>
   </g>
   <g class="b">
     <g class="g">
-      <text class="f" transform="translate(328.64 112.27) rotate(-0.14)">1</text>
-      <text class="f" transform="translate(335.07 112.25) rotate(-0.14)">15</text>
+      <text class="f" transform="translate(328.64 112.27) rotate(-0.14)">115</text>
     </g>
   </g>
 </svg>
