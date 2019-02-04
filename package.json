@@ -1,0 +1,25 @@
+{
+  "name": "mapgt-frontend",
+  "version": "1.0.0",
+  "description": "The 🔥 frontend for MapGT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackGT/mapgt-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HackGT/mapgt-frontend/issues"
+  },
+  "homepage": "https://github.com/HackGT/mapgt-frontend#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "jssoup": "0.0.10",
+    "simple-svg-tools": "^1.1.12",
+    "svgson": "^3.0.0"
+  }
+}
