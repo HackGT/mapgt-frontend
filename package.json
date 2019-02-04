@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/HackGT/mapgt-frontend#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "jssoup": "0.0.10",
+    "simple-svg-tools": "^1.1.12",
+    "svgson": "^3.0.0"
   }
 }

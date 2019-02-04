@@ -5,7 +5,6 @@ const port = 3000;
 // html -> get, post, put, delete
 
 app.get('/', (req, res) => {
-  res.send("hello world");
 })
 
 app.listen(port, () => console.log(`Listening on ${port}`));
