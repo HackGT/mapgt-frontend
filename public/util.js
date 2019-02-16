@@ -44,8 +44,12 @@ function getRoomLocation(roomNumber) {
             'left': leftDOM,
             'top': topDOM
         }
+<<<<<<< HEAD
         console.log(topDOM);
         console.log(leftDOM);
+=======
+
+>>>>>>> fe7acad4e59f9f97e92a2fbfb680cab52eb5cf3f
         var card = document.getElementById("card")
         card.style.top = String(topDOM - 250) + 'px'
         card.style.left = String(leftDOM - 225) + 'px'

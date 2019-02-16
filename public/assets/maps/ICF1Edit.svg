@@ -1183,7 +1183,7 @@
   <g class="b"><line class="e" x1="504.89" y1="141.96" x2="571.49" y2="75.03"/></g>
   <g class="b"><line class="e" x1="504.94" y1="164.27" x2="593.72" y2="74.97"/></g>
   <g class="b">
-    <text class="f" transform="translate(42.93 139.07) rotate(-0.14)">103</text>
+    <text id="room103" class="f" transform="translate(42.93 139.07) rotate(-0.14)">103</text>
   </g>
   <g class="b">
     <g class="g">
