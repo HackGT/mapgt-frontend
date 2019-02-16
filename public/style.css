@@ -65,4 +65,41 @@ input:checked + .slider:before {
 #floor2 {
   display: none;
 }
-  
+
+.marker {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    display: none;
+    position: absolute;
+}
+
+.marker-extension {
+    display: block;
+    float: left;
+}
+
+.card {
+    width: 450px;
+    height: 250px;
+    background: #8FBEFF;
+    opacity: 0.7;
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 1.5rem;
+    display: block;
+    position: absolute;
+}
+
+.card .additional {
+    width: 150px;
+    height: 100%;
+    background-color: #036BFF;
+    transition: width 0.4s;
+    z-index: 2;
+}
+
+.card:hover .additional {
+    width: 100%;
+}

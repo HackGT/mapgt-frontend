@@ -15,6 +15,16 @@ function toggleFloors() {
       }
 }
 
+function toggleCard(top) {
+    if (card.style.height == "250px") {
+        $(card).animate({height: "0px"});
+        $(card).animate({top: "10px"});
+    } else {
+        $(card).animate({height: "250px"}, "fast", "swing");
+        $(card).animate({top: "250px"}, "fast", "swing");
+    }
+}
+
 function getRoomLocation(roomNumber) {
       var stringRoomNumber = String(roomNumber)
       var floorNumber = parseInt(stringRoomNumber.charAt(0))
@@ -22,10 +32,30 @@ function getRoomLocation(roomNumber) {
       // TODO, just index based on the first digit into an array
       var floorElement = floorNumber == 2 ? secondFloor : firstFloor
 
-      var svgDom = floorElement.contentDocument.children[0]
+      floorElement.addEventListener("load", () => {
+        var svgDom = floorElement.contentDocument.children[0]
+        var matchingTextNodes = Array.from(svgDom.querySelectorAll('text'))
+        .find(el => el.textContent.trim() === stringRoomNumber.trim());
+        var transformToDOM = matchingTextNodes.getBoundingClientRect()
+        var leftDOM = transformToDOM.left
+        var topDOM = transformToDOM.top
 
-      var matchingTextNodes = Array.from(svgDom.querySelectorAll('text'))
-            .find(el => el.textContent.trim() === stringRoomNumber.trim());
+        var newObj = {
+            'left': leftDOM,
+            'top': topDOM
+        }
 
-      // TODO, return the actual position, in the global frame, of the text node, so we can put dots & stuff there
+        var card = document.getElementById("card")
+        card.style.top = String(topDOM - 250) + 'px'
+        card.style.left = String(leftDOM - 225) + 'px'
+
+    }, false);
 }
+
+function displayCard(top) {
+    let card = document.getElementById("card");
+    toggleCard(top)
+}
+
+// create a function to display a dot at the location
+getRoomLocation(111)
