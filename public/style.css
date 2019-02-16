@@ -67,10 +67,6 @@ input:checked + .slider:before {
 }
 
 .marker {
-    height: 50px;
-    width: 50px;
-    background-color: red;
-    display: none;
     position: absolute;
 }
 

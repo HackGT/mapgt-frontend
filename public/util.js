@@ -1,9 +1,42 @@
 var firstFloor = document.getElementById("floor1");
 var secondFloor = document.getElementById("floor2");
 
-// TODO, add some way to select from n different floors
-// because Klaus has three
-// consider not using a button with an array as a backing structure
+// TODO: find pin offset values after editing the map
+
+function addLocationPins(floor) {
+    $.getJSON("rooms.json", function(json) {
+        for (let i = 0; i < json.length; i += 1 ) {
+            if (json[i]["floor"] === floor){
+                addPinToLoc(json[i]["number"]);
+            }
+        }
+    })
+}
+
+function setPinAttributes(pin, roomNumber, location) {
+    var attributes = {
+        "id": roomNumber,
+        "type": "image/svg+xml",
+        "data": "assets/locationPin.svg",
+    }
+    for (let key in attributes) {
+        pin.setAttribute(key, attributes[key]);
+    }
+    console.log("reached set pin attr")
+    console.log(location)
+    pin.classList.add("marker", "marker-extension");
+    pin.style.left = location['left'] + "px";
+    pin.style.top = location['top'] + "px";
+
+}
+
+function createPin(roomNumber, location) {
+    // TODO: return a new pin element
+    console.log("reached create Pin")
+    var pin = document.createElement("object");
+    setPinAttributes(pin, roomNumber, location);
+    return pin
+}
 
 function toggleFloors() {
       if (firstFloor.style.display === "none") {
@@ -15,21 +48,12 @@ function toggleFloors() {
       }
 }
 
-function toggleCard(top) {
-    if (card.style.height == "250px") {
-        $(card).animate({height: "0px"});
-        $(card).animate({top: "10px"});
-    } else {
-        $(card).animate({height: "250px"}, "fast", "swing");
-        $(card).animate({top: "250px"}, "fast", "swing");
-    }
-}
 
-function getRoomLocation(roomNumber) {
+
+function addPinToLoc(roomNumber) {
       var stringRoomNumber = String(roomNumber)
       var floorNumber = parseInt(stringRoomNumber.charAt(0))
 
-      // TODO, just index based on the first digit into an array
       var floorElement = floorNumber == 2 ? secondFloor : firstFloor
 
       floorElement.addEventListener("load", () => {
@@ -40,27 +64,26 @@ function getRoomLocation(roomNumber) {
         var leftDOM = transformToDOM.left
         var topDOM = transformToDOM.top
 
-        var newObj = {
+        var location = {
             'left': leftDOM,
             'top': topDOM
         }
-<<<<<<< HEAD
-        console.log(topDOM);
-        console.log(leftDOM);
-=======
-
->>>>>>> fe7acad4e59f9f97e92a2fbfb680cab52eb5cf3f
-        var card = document.getElementById("card")
-        card.style.top = String(topDOM - 250) + 'px'
-        card.style.left = String(leftDOM - 225) + 'px'
+        var pins = document.getElementById("pins");
+        console.log(pins)
+        var pin = createPin(roomNumber, location);
+        pins.appendChild(pin);
 
     }, false);
 }
 
-function displayCard(top) {
-    let card = document.getElementById("card");
-    toggleCard(top)
-}
+addLocationPins(1);
 
-// create a function to display a dot at the location
-getRoomLocation(111)
+// function toggleCard(top) {
+//     if (card.style.height == "250px") {
+//         $(card).animate({height: "0px"});
+//         $(card).animate({top: "10px"});
+//     } else {
+//         $(card).animate({height: "250px"}, "fast", "swing");
+//         $(card).animate({top: "250px"}, "fast", "swing");
+//     }
+// }
