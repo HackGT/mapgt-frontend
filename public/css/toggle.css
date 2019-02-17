@@ -5,6 +5,8 @@
   display: inline-block;
   width: 60px;
   height: 34px;
+  left: 40%;
+  top: 660px;
 }
 
 /* Hide default HTML checkbox */
