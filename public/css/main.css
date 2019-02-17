@@ -1,0 +1,24 @@
+#floor2 {
+    display: none;
+    height: auto;
+    max-width: 60%;
+    position: relative;
+    left: 9%;
+    top: 50px;
+}
+
+#floor1 {
+    height: auto;
+    max-width: 60%;
+    position: relative;
+    left: 9%;
+    top: 50px;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
