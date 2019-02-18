@@ -66,16 +66,16 @@ input:checked + .slider:before {
   display: none;
 }
 
-.marker {
+.location-pin {
     position: absolute;
-}
-
-.marker-extension {
     display: block;
     float: left;
 }
 
-.card {
+.location-pin:hover {
+    cursor: ;
+}
+/* .card {
     width: 450px;
     height: 250px;
     background: #8FBEFF;
@@ -98,4 +98,4 @@ input:checked + .slider:before {
 
 .card:hover .additional {
     width: 100%;
-}
+} */

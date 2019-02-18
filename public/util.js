@@ -1,7 +1,9 @@
 var firstFloor = document.getElementById("floor1");
 var secondFloor = document.getElementById("floor2");
 
-// TODO: find pin offset values after editing the map
+// Next set of todos
+// wrap the pin elements with a button
+
 
 function addLocationPins(floor) {
     $.getJSON("rooms.json", function(json) {
@@ -22,17 +24,15 @@ function setPinAttributes(pin, roomNumber, location) {
     for (let key in attributes) {
         pin.setAttribute(key, attributes[key]);
     }
-    console.log("reached set pin attr")
-    console.log(location)
-    pin.classList.add("marker", "marker-extension");
+    pin.setAttribute('pointer-events', 'none');
+    pin.classList.add("location-pin");
     pin.style.left = location['left'] + "px";
     pin.style.top = location['top'] + "px";
 
 }
 
 function createPin(roomNumber, location) {
-    // TODO: return a new pin element
-    console.log("reached create Pin")
+    console.log("reached create Pin");
     var pin = document.createElement("object");
     setPinAttributes(pin, roomNumber, location);
     return pin
@@ -48,7 +48,9 @@ function toggleFloors() {
       }
 }
 
-
+function dispModal() {
+    console.log("hit this boi")
+}
 
 function addPinToLoc(roomNumber) {
       var stringRoomNumber = String(roomNumber)
@@ -69,12 +71,14 @@ function addPinToLoc(roomNumber) {
             'top': topDOM
         }
         var pins = document.getElementById("pins");
-        console.log(pins)
         var pin = createPin(roomNumber, location);
         pins.appendChild(pin);
 
+        pins.setAttribute("onclick", "dispModal()")
     }, false);
 }
+
+
 
 addLocationPins(1);
 
