@@ -1,39 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>MapGT</title>
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/toggle.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Rounded switch -->
-        <!-- <script src="../index.js"></script> -->
-        <label class="switch">
-            <input type="checkbox" onclick="toggleFloors()">
-            <span class="slider round"></span>
-        </label>
 
-        <h1 class="alignleft">BuildGT 2</h1>
-        <h1 class="alignright">MapGT</h1>
+<head>
+    <meta charset="utf-8">
+    <title>MapGT</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/toggle.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
 
-        <object id="floor1" type="image/svg+xml" data="assets/maps/ICF1Edit.svg"></object>
-        <object id="floor2" type="image/svg+xml" data="assets/maps/ICF2Edit.svg"></object>
-        <div id="pins">
-        </div>
-        <!-- <div id="card" class="card">
-            <div class="additional">
-                <div class="event-card">
-                </div>
-                <div class="more-info">
-                </div>
-            </div>
-            <div class="general">
-            </div>
-        </div> -->
-<!-- <button type="button" name="button" onclick="getRoomLocation(111)">Toggle card</button> -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="util.js"></script>
-    </body>
+<body>
+    <!-- Rounded switch -->
+    <!-- <script src="../index.js"></script> -->
+    <label class="switch">
+        <input type="checkbox" onclick="toggleFloors()">
+        <span class="slider round"></span>
+    </label>
+
+    <h1 class="alignleft">BuildGT 2</h1>
+    <h1 class="alignright">MapGT</h1>
+
+    <object id="floor1" type="image/svg+xml" data="assets/maps/ICF1Edit.svg" style="display: block;"></object>
+    <object id="floor2" type="image/svg+xml" data="assets/maps/ICF2Edit.svg" style="display: none;"></object>
+    <div id="pins">
+    </div>
+    <script src="util.js"></script>
+</body>
+
 </html>
