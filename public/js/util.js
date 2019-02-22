@@ -85,7 +85,7 @@ function addPinToLoc(roomNumber) {
         var xpos = matchingTextNodes.getAttribute("x") - -4;
         // I know this looks weird, but javascript is more weird
         // if i do xpos + 4, it just doesnt work, but - works
-        var ypos = matchingTextNodes.getAttribute("y") - 25;
+        var ypos = matchingTextNodes.getAttribute("y") - 40;
         var pin = createPin(roomNumber, location);
         var pins = document.getElementById("pins");
         pins.appendChild(pin);
@@ -94,11 +94,33 @@ function addPinToLoc(roomNumber) {
             pinDOM.setAttribute("x", xpos);
             pinDOM.setAttribute("y", ypos);
             svgDOM.appendChild(pinDOM);
-            pinDOM.addEventListener("click", function() {
-                    console.log("a")
+            pinDOM.id = "room-" + roomNumber
+            pinDOM.addEventListener("click", function(e) {
+                var clickedElement = getTopLevelOfPin(e.target)
+                var clickedElementGroup = clickedElement.getElementsByTagName('g')[0]
+
+                if (clickedElementGroup.classList.contains('pin-selected')) {
+                    clickedElementGroup.classList.remove('pin-selected')
+                    removeModal()
+                } else {
+                    var selectedPins = svgDOM.querySelectorAll('.pin-selected')
+                    for (var i = 0; i < selectedPins.length; i++) {
+                        selectedPins[i].classList.remove('pin-selected')
+                    }
+                    clickedElementGroup.classList.add('pin-selected')
+                    showModal(clickedElement.id)
+                }
+                
             })
         }, false);
     }, false);
+}
+
+function getTopLevelOfPin(arbitraryPinElement) {
+    while (arbitraryPinElement.tagName != "svg") {
+        arbitraryPinElement = arbitraryPinElement.parentNode
+    }
+    return arbitraryPinElement
 }
 
 function setPinAttributes(pin, roomNumber, location) {
@@ -136,21 +158,28 @@ function toggleFloors() {
     }
 }
 
+// todo fix naming or something idk
+
 function toggleModal() {
     modal.classList.toggle("show-modal");
-    modalOverlay.classList.toggle("modal-overlay")
 }
 
-function windowOnClick(event) {
-    if (event.target == modal) {
-        toggleModal();
-    }
+function showModal(id) {
+    console.log(id)
+    modal.classList.remove("show-modal");
+}
+
+function removeModal() {
+    modal.classList.add("show-modal");
+}
+
+window.onclick = function() {
+    removeModal()
 }
 
 function dispModal() {
     toggleSelectedPin();
     toggleModal();
-    window.addEventListener("click", windowOnClick)
 }
 
 function toggleSelectedPin() {
