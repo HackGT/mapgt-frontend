@@ -1,7 +1,10 @@
 var firstFloor = document.getElementById("floor1");
 var secondFloor = document.getElementById("floor2");
+var modal = document.querySelector('.modal');
+var modalOverlay = document.querySelector('.modal-overlay');
 
-var rooms = [{
+var rooms = [
+    {
         "number": 103,
         "name": "",
         "floor": 1,
@@ -91,6 +94,9 @@ function addPinToLoc(roomNumber) {
             pinDOM.setAttribute("x", xpos);
             pinDOM.setAttribute("y", ypos);
             svgDOM.appendChild(pinDOM);
+            pinDOM.addEventListener("click", function() {
+                    console.log("a")
+            })
         }, false);
     }, false);
 }
@@ -128,6 +134,27 @@ function toggleFloors() {
         secondFloor.style.display = "block";
         addLocationPins(2);
     }
+}
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+    modalOverlay.classList.toggle("modal-overlay")
+}
+
+function windowOnClick(event) {
+    if (event.target == modal) {
+        toggleModal();
+    }
+}
+
+function dispModal() {
+    toggleSelectedPin();
+    toggleModal();
+    window.addEventListener("click", windowOnClick)
+}
+
+function toggleSelectedPin() {
+
 }
 
 addLocationPins(1);
