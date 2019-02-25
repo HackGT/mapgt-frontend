@@ -110,7 +110,7 @@ function addPinToLoc(roomNumber) {
                     clickedElementGroup.classList.add('pin-selected')
                     showModal(clickedElement.id)
                 }
-                
+
             })
         }, false);
     }, false);
@@ -183,7 +183,6 @@ function dispModal() {
 }
 
 function toggleSelectedPin() {
-
 }
 
 addLocationPins(1);
