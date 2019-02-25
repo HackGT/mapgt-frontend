@@ -1,18 +1,60 @@
-#floor2 {
-    display: none;
-    height: auto;
-    max-width: 60%;
+#floor1, #floor2 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* left: 9%; */
+    left: 50%;
+    /* top: 20px; */
     position: relative;
-    left: 9%;
-    top: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%
 }
 
-#floor1 {
-    height: auto;
-    max-width: 60%;
-    position: relative;
-    left: 9%;
-    top: 20px;
+#floor2 {
+    display: none;
+}
+
+.maps {
+    position: absolute;
+    width: 45%;
+    /* top: 50%; */
+    bottom: 10%;
+    left: 50%;
+    height: 80%;
+    transform: translateX(-50%);
+}
+
+@media (max-width:1200px) {
+    /* manually found this breakpoint by trial/error */
+    /* make floor map centered */
+    .maps {
+        width: 50%;
+    }
+}
+
+@media (max-width:1000px) {
+    /* manually found this breakpoint by trial/error */
+    /* make floor map centered */
+    .maps {
+        width: 58%;
+    }
+}
+
+@media (max-width:800px) {
+    /* manually found this breakpoint by trial/error */
+    /* make floor map centered */
+    .maps {
+        width: 66%;
+    }
+}
+
+@media (max-width:600px) {
+    /* manually found this breakpoint by trial/error */
+    /* make floor map centered */
+    .maps {
+        width: 80%;
+    }
 }
 
 .alignleft {

@@ -5,8 +5,8 @@
   display: inline-block;
   width: 60px;
   height: 34px;
-  left: 38%;
-  top: 660px;
+  /* left: 38%; */
+  /* top: 660px; */
 }
 
 /* Hide default HTML checkbox */
@@ -77,6 +77,14 @@ input:checked + .slider:before {
 .location-pin:hover {
     cursor: ;
 }
+
+.toggleButton {
+  max-width: 60%;
+  bottom: 1em;
+  left: 50%;
+  position: absolute;
+}
+
 /* .card {
     width: 450px;
     height: 250px;
