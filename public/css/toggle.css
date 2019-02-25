@@ -1,73 +1,3 @@
-/* The switch - the box around the slider */
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  /* left: 38%; */
-  /* top: 660px; */
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-#floor2 {
-  display: none;
-}
-
 .location-pin {
     position: absolute;
     display: block;
@@ -79,9 +9,8 @@ input:checked + .slider:before {
 }
 
 .toggleButton {
-  max-width: 60%;
-  bottom: 1em;
-  left: 50%;
+  bottom: 3em;
+  left: 47%;
   position: absolute;
 }
 
@@ -109,3 +38,63 @@ input:checked + .slider:before {
 .card:hover .additional {
     width: 100%;
 } */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.toggle {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 60px;
+  color: white;
+  outline: 0;
+  text-decoration: none;
+  border-radius: 100px;
+  border: 2px solid #546e7a;
+  background-color: #056b;
+  transition: all 500ms;
+}
+.toggle:active {
+  background-color: #1c2429;
+}
+.toggle:hover:not(.toggle--moving):after {
+  background-color: #455a64;
+}
+.toggle:after {
+  display: block;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: white;
+  background-color: #37474f;
+  border: 2px solid;
+  transition: all 500ms;
+}
+.toggle--on:after {
+  content: '1st';
+  border-radius: 50px 5px 5px 50px;
+  color: #9dfcff;
+}
+.toggle--off:after {
+  content: '2nd';
+  border-radius: 5px 50px 50px 5px;
+  transform: translate(100%, 0);
+  color: #056bff;
+}
+.toggle--moving {
+  background-color: #1c2429;
+}
+.toggle--moving:after {
+  color: transparent;
+  border-color: #435862;
+  background-color: #222c31;
+  transition: color 0s, transform 500ms, border-radius 500ms, background-color 500ms;
+}
