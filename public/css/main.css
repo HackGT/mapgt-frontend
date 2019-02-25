@@ -57,6 +57,14 @@
     }
 }
 
+@media (max-width:400px) {
+    /* manually found this breakpoint by trial/error */
+    /* make floor map centered */
+    .maps {
+        width: 90%;
+    }
+}
+
 .alignleft {
 	float: left;
 }
