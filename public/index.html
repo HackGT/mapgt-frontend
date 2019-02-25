@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>MapGT</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/toggle.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -21,12 +22,7 @@
     </div>
 
     <div class="toggleButton">
-        <!-- Rounded switch -->
-        <!-- <script src="../index.js"></script> -->
-        <label class="switch">
-            <input type="checkbox" onclick="toggleFloors()">
-            <span class="slider round"></span>
-        </label>
+        <a href="#" class="toggle toggle--on" id="toggle" onclick="toggleFloors()"></a>
     </div>
     
     <div id="pins">

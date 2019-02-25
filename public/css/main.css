@@ -19,7 +19,7 @@
     position: absolute;
     width: 45%;
     /* top: 50%; */
-    bottom: 10%;
+    bottom: 15%;
     left: 50%;
     height: 80%;
     transform: translateX(-50%);
@@ -37,7 +37,7 @@
     /* manually found this breakpoint by trial/error */
     /* make floor map centered */
     .maps {
-        width: 58%;
+        width: 65%;
     }
 }
 
