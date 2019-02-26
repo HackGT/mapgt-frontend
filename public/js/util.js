@@ -3,6 +3,26 @@ var secondFloor = document.getElementById("floor2");
 var modal = document.querySelector('.modal');
 var modalOverlay = document.querySelector('.modal-overlay');
 
+var events;
+
+// An AJAX request to get the data from the event-data.json file and parsing it
+$.getJSON({
+    url: "./event-data.json",
+    async: false
+}, function(data) {
+    events = data;
+});
+
+// Transforming the start and end times into date objects
+for (event of events) {
+    var eventStartTime = event.startTime;
+    var eventEndTime = event.endTime;
+    event.startTime = new Date("March 2, 2019 " + eventStartTime);
+    event.endTime = new Date("March 2, 2019 " + eventEndTime);
+}
+
+console.log(events);
+
 var rooms = [
     {
         "number": 103,
@@ -179,7 +199,33 @@ function toggleModal() {
 }
 
 function showModal(id) {
-    console.log(id)
+    // This is hacky as heck but hopefully it'll do for now
+    var roomNumber = id.replace(/\D/g, "");
+    var eventsInRoom = events.filter(event => event.location === roomNumber);
+    var now = new Date(Date.now());
+    var oneHourFromNow = new Date(now.getTime() + 3600000);
+    var eventsRightNow = eventsInRoom.filter(event => event.startTime < now && event.endTime > now); // All events happening right now
+    var eventsInNextHour = eventsInRoom.filter(event => event.startTime < oneHourFromNow && event.endTime > oneHourFromNow); // All events for which the time one hour from now falls between their start and end times
+    var eventDisplay = document.querySelector("#current-event");
+    var upcomingEventsDisplay = document.querySelector("#upcoming-events");
+
+    if (eventsRightNow.length === 0) {
+        eventDisplay.textContent = "None right now";
+    } else {
+        eventDisplay.textContent = "- " + eventsRightNow[0].name;
+    }
+
+    if (eventsInNextHour.length === 0) {
+        upcomingEventsDisplay.textContent = "None in the next hour";
+    } else {
+        for (event of eventsInNextHour) {
+            upcomingEventsDisplay.textContent = "";
+
+            upcomingEventsDisplay.textContent += "- " + event.name;
+            upcomingEventsDisplay.textContent += "\n";
+        }
+    }
+
     modal.classList.remove("show-modal");
 }
 
