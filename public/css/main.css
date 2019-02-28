@@ -17,10 +17,10 @@
 
 .maps {
     position: absolute;
-    width: 45%;
+    width: 55%;
     /* top: 50%; */
     bottom: 15%;
-    left: 50%;
+    left: 48%;
     height: 80%;
     transform: translateX(-50%);
 }
@@ -29,7 +29,7 @@
     /* manually found this breakpoint by trial/error */
     /* make floor map centered */
     .maps {
-        width: 50%;
+        width: 55%;
     }
 }
 
