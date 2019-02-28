@@ -17,7 +17,7 @@ $.getJSON({
 for (event of events) {
     var eventStartTime = event.startTime;
     var eventEndTime = event.endTime;
-    event.startTime = new Date("March 2, 2019 " + eventStartTime);
+    event.startTime = new Date("March 2, 2019" + eventStartTime);
     event.endTime = new Date("March 2, 2019 " + eventEndTime);
 }
 
@@ -200,12 +200,12 @@ function toggleModal() {
 
 function showModal(id) {
     // This is hacky as heck but hopefully it'll do for now
-    var roomNumber = id.replace(/\D/g, "");
+    var roomNumber = id.replace(/\D/g, ""); // Stripping the text and leaving only the room number from the HTML element ID passed into this method
     var eventsInRoom = events.filter(event => event.location === roomNumber);
     var now = new Date(Date.now());
     var oneHourFromNow = new Date(now.getTime() + 3600000);
     var eventsRightNow = eventsInRoom.filter(event => event.startTime < now && event.endTime > now); // All events happening right now
-    var eventsInNextHour = eventsInRoom.filter(event => event.startTime < oneHourFromNow && event.endTime > oneHourFromNow); // All events for which the time one hour from now falls between their start and end times
+    var eventsInNextHour = eventsInRoom.filter(event => event.startTime > now && event.startTime < oneHourFromNow); // All events whose start times are within an hour from when the pin is clicked
     var eventDisplay = document.querySelector("#current-event");
     var upcomingEventsDisplay = document.querySelector("#upcoming-events");
 
@@ -216,12 +216,13 @@ function showModal(id) {
     }
 
     if (eventsInNextHour.length === 0) {
-        upcomingEventsDisplay.textContent = "None in the next hour";
+        upcomingEventsDisplay.textContent = "None in the next hour. Stay tuned!";
     } else {
-        for (event of eventsInNextHour) {
-            upcomingEventsDisplay.textContent = "";
+        upcomingEventsDisplay.textContent = "";
 
-            upcomingEventsDisplay.textContent += "- " + event.name;
+        for (event of eventsInNextHour) {
+            eventStartTimeString = event.startTime.toLocaleTimeString("en-us", { hour: "numeric", minute: "2-digit" });
+            upcomingEventsDisplay.textContent += "- " + event.name + " (" + eventStartTimeString + ")";
             upcomingEventsDisplay.textContent += "\n";
         }
     }
