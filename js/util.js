@@ -8,7 +8,7 @@ var events;
 // An AJAX request to get the data from the event-data.json file and parsing it
 $.getJSON({
     url: "./event-data.json",
-    async: false
+    async: false,
 }, function(data) {
     events = data;
 });
