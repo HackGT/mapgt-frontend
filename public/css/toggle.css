@@ -45,7 +45,8 @@
 }
 
 .more-info {
-  transform: translate(5%, -69.5%);
+  transform: translate(5%, -59%);
+  width: 90%;
 }
 
 .additional {
