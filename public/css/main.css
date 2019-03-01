@@ -17,7 +17,7 @@
 
 .maps {
     position: absolute;
-    width: 55%;
+    width: 50%;
     /* top: 50%; */
     bottom: 15%;
     left: 48%;
@@ -112,6 +112,7 @@
     z-index: 1010;
     position: fixed;
     top: 50%;
+    border: solid;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
