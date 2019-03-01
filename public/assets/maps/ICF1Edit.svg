@@ -457,17 +457,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.62710784"
-     inkscape:cx="522.32062"
-     inkscape:cy="395.25358"
+     inkscape:cx="568.36217"
+     inkscape:cy="392.71208"
      inkscape:document-units="mm"
-     inkscape:current-layer="svg8"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:pagecheckerboard="true"
      inkscape:window-width="1440"
      inkscape:window-height="789"
-     inkscape:window-x="0"
-     inkscape:window-y="1"
-     inkscape:window-maximized="1" />
+     inkscape:window-x="-16"
+     inkscape:window-y="3"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -476,7 +476,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -836,4 +836,73 @@
        id="rect40717"
        style="opacity:1;fill:#1fc4ff;fill-opacity:1;stroke:#2150ff;stroke-width:0.46815464;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
+  <rect
+     style="fill:#dbe1e1;fill-opacity:1;stroke:#000000;stroke-width:0.86010295;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1220"
+     width="25.538042"
+     height="5.1328716"
+     x="69.691833"
+     y="26.869841" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     x="77.418114"
+     y="29.656054"
+     id="text1479"><tspan
+       sodipodi:role="line"
+       id="tspan1477"
+       x="77.418114"
+       y="39.019821"
+       style="stroke-width:0.26458332" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     x="77.567284"
+     y="25.330189"
+     id="text1483"><tspan
+       sodipodi:role="line"
+       id="tspan1481"
+       x="77.567284"
+       y="34.693958"
+       style="stroke-width:0.26458332" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     x="72.644745"
+     y="30.401897"
+     id="text1487"><tspan
+       sodipodi:role="line"
+       id="tspan1485"
+       x="72.644745"
+       y="30.401897"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82222223px;line-height:0;font-family:Futura;-inkscape-font-specification:'Futura Medium';stroke-width:0.26458332">REGISTRATION</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     x="85.225899"
+     y="69.50383"
+     id="text1491"><tspan
+       sodipodi:role="line"
+       id="tspan1489"
+       x="85.225899"
+       y="78.867599"
+       style="stroke-width:0.26458332"></tspan></text>
+  <rect
+     y="141.64288"
+     x="188.94649"
+     height="5.1060443"
+     width="30.522589"
+     id="rect1493"
+     style="fill:#dbe1e1;fill-opacity:1;stroke:#000000;stroke-width:0.93784148;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     x="196.8212"
+     y="145.0258"
+     id="text1497"><tspan
+       sodipodi:role="line"
+       id="tspan1495"
+       x="196.8212"
+       y="145.0258"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82222223px;font-family:Futura;-inkscape-font-specification:'Futura Medium';stroke-width:0.26458332">HELP DESK</tspan></text>
 </svg>

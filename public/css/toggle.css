@@ -41,7 +41,11 @@
 } */
 
 .event-card {
-  transform: translate(110%, 15%);
+  transform: translate(110%, 30%);
+}
+
+.event-card h2 {
+    color: white;
 }
 
 .more-info {

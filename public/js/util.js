@@ -235,7 +235,7 @@ function removeModal() {
 }
 
 window.onclick = function() {
-    removeModal()
+    removeModal();
 }
 
 function dispModal() {
