@@ -665,7 +665,7 @@
          id="tspan40599"
          x="64.483154"
          y="92.012024"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.69999981px;line-height:2.25;font-family:Futura;-inkscape-font-specification:'Futura Bold';stroke:none;stroke-width:0.47599998;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">103</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.69999981px;line-height:2.25;font-family:Futura, Sans-Serif;-inkscape-font-specification:'Futura, Sans-Serif Bold';stroke:none;stroke-width:0.47599998;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">103</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot40603"
@@ -678,7 +678,7 @@
            x="712.79608"
            y="174.98744" /></flowRegion><flowPara
          id="flowPara40609"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Futura;-inkscape-font-specification:Futura" /></flowRoot>    <text
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Futura, Sans-Serif;-inkscape-font-specification:Futura, Sans-Serif" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.465;stroke-miterlimit:4;stroke-dasharray:none"
        x="137.12088"
@@ -688,7 +688,7 @@
          id="tspan40611"
          x="137.12088"
          y="148.40108"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.69999981px;font-family:Futura;-inkscape-font-specification:'Futura Bold';stroke:none;stroke-width:0.465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">105</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.69999981px;font-family:Futura, Sans-Serif;-inkscape-font-specification:'Futura, Sans-Serif Bold';stroke:none;stroke-width:0.465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">105</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.36500001;stroke-miterlimit:4;stroke-dasharray:none"
@@ -699,7 +699,7 @@
          id="tspan40619"
          x="249.34906"
          y="163.58984"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.69999981px;font-family:Futura;-inkscape-font-specification:'Futura Bold';stroke:none;stroke-width:0.36500001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">111</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.69999981px;font-family:Futura, Sans-Serif;-inkscape-font-specification:'Futura, Sans-Serif Bold';stroke:none;stroke-width:0.36500001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">111</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path40638"
@@ -715,7 +715,7 @@
          id="tspan40640"
          x="201.67319"
          y="60.221802"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.69999981px;font-family:Futura;-inkscape-font-specification:'Futura Bold';stroke:none;stroke-width:0.465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">115</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.69999981px;font-family:Futura, Sans-Serif;-inkscape-font-specification:'Futura, Sans-Serif Bold';stroke:none;stroke-width:0.465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">115</tspan></text>
     <path
        style="fill:#1fc2ff;fill-opacity:1;stroke:#2150ff;stroke-width:0.76499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 194.92268,117.91797 0.0527,-3.74445 3.7972,-0.0527 v -3.69172 l 3.84993,-0.0527 0.0527,-3.84993 h 3.74446 v 11.23337 z"
@@ -875,7 +875,7 @@
        id="tspan1485"
        x="75.914536"
        y="28.925211"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0;font-family:Futura;-inkscape-font-specification:'Futura Medium';stroke-width:0.26458332">REGISTRATION</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0;font-family:Futura, Sans-Serif;-inkscape-font-specification:'Futura, Sans-Serif Medium';stroke-width:0.26458332">REGISTRATION</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -904,5 +904,5 @@
        id="tspan1495"
        x="191.30199"
        y="143.83246"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;font-family:Futura;-inkscape-font-specification:'Futura Medium';stroke-width:0.26458332">HELP DESK</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;font-family:Futura, Sans-Serif;-inkscape-font-specification:'Futura, Sans-Serif Medium';stroke-width:0.26458332">HELP DESK</tspan></text>
 </svg>
