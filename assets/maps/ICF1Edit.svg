@@ -457,10 +457,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.62710784"
-     inkscape:cx="568.36217"
-     inkscape:cy="392.71208"
+     inkscape:cx="501.37194"
+     inkscape:cy="297.97358"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer5"
      showgrid="false"
      inkscape:pagecheckerboard="true"
      inkscape:window-width="1440"
@@ -691,17 +691,6 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.69999981px;font-family:Futura;-inkscape-font-specification:'Futura Bold';stroke:none;stroke-width:0.465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">105</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.47600001;stroke-miterlimit:4;stroke-dasharray:none"
-       x="197.45407"
-       y="188.90446"
-       id="text40617"><tspan
-         sodipodi:role="line"
-         id="tspan40615"
-         x="197.45407"
-         y="188.90446"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.69999981px;font-family:Futura;-inkscape-font-specification:'Futura Bold';stroke:none;stroke-width:0.47600001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">109</tspan></text>
-    <text
-       xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.36500001;stroke-miterlimit:4;stroke-dasharray:none"
        x="249.34906"
        y="163.58984"
@@ -837,12 +826,12 @@
        style="opacity:1;fill:#1fc4ff;fill-opacity:1;stroke:#2150ff;stroke-width:0.46815464;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
   <rect
-     style="fill:#dbe1e1;fill-opacity:1;stroke:#000000;stroke-width:0.86010295;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:#dbe1e1;fill-opacity:1;stroke:#000000;stroke-width:1.40599978;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect1220"
-     width="25.538042"
-     height="5.1328716"
-     x="69.691833"
-     y="26.869841" />
+     width="36.700161"
+     height="9.5444221"
+     x="72.397987"
+     y="22.669998" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -868,14 +857,14 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-     x="72.644745"
-     y="30.401897"
+     x="75.914536"
+     y="28.925211"
      id="text1487"><tspan
        sodipodi:role="line"
        id="tspan1485"
-       x="72.644745"
-       y="30.401897"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82222223px;line-height:0;font-family:Futura;-inkscape-font-specification:'Futura Medium';stroke-width:0.26458332">REGISTRATION</tspan></text>
+       x="75.914536"
+       y="28.925211"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;line-height:0;font-family:Futura;-inkscape-font-specification:'Futura Medium';stroke-width:0.26458332">REGISTRATION</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -886,23 +875,23 @@
        id="tspan1489"
        x="85.225899"
        y="78.867599"
-       style="stroke-width:0.26458332"></tspan></text>
+       style="stroke-width:0.26458332" /></text>
   <rect
-     y="141.64288"
-     x="188.94649"
-     height="5.1060443"
-     width="30.522589"
+     y="138.08371"
+     x="185.23814"
+     height="8.4951982"
+     width="34.060909"
      id="rect1493"
-     style="fill:#dbe1e1;fill-opacity:1;stroke:#000000;stroke-width:0.93784148;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+     style="fill:#dbe1e1;fill-opacity:1;stroke:#000000;stroke-width:1.27788377;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-     x="196.8212"
-     y="145.0258"
+     x="191.30199"
+     y="143.83246"
      id="text1497"><tspan
        sodipodi:role="line"
        id="tspan1495"
-       x="196.8212"
-       y="145.0258"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82222223px;font-family:Futura;-inkscape-font-specification:'Futura Medium';stroke-width:0.26458332">HELP DESK</tspan></text>
+       x="191.30199"
+       y="143.83246"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333311px;font-family:Futura;-inkscape-font-specification:'Futura Medium';stroke-width:0.26458332">HELP DESK</tspan></text>
 </svg>

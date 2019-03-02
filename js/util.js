@@ -2,13 +2,14 @@ var firstFloor = document.getElementById("floor1");
 var secondFloor = document.getElementById("floor2");
 var modal = document.querySelector('.modal');
 var modalOverlay = document.querySelector('.modal-overlay');
+var currentClickedPin = "";
 
 var events;
 
 // An AJAX request to get the data from the event-data.json file and parsing it
 $.getJSON({
     url: "./event-data.json",
-    async: false,
+    async: false
 }, function(data) {
     events = data;
 });
@@ -17,7 +18,7 @@ $.getJSON({
 for (event of events) {
     var eventStartTime = event.startTime;
     var eventEndTime = event.endTime;
-    event.startTime = new Date("March 2, 2019 " + eventStartTime);
+    event.startTime = new Date("March 2, 2019" + eventStartTime);
     event.endTime = new Date("March 2, 2019 " + eventEndTime);
 }
 
@@ -116,11 +117,13 @@ function addPinToLoc(roomNumber) {
             svgDOM.appendChild(pinDOM);
             pinDOM.id = "room-" + roomNumber
             pinDOM.addEventListener("click", function(e) {
+                console.log("I am in the event listener for PINDOM");
                 var clickedElement = getTopLevelOfPin(e.target)
                 var clickedElementGroup = clickedElement.getElementsByTagName('g')[0]
-
+                currentClickedPin = clickedElementGroup;
                 if (clickedElementGroup.classList.contains('pin-selected')) {
                     clickedElementGroup.classList.remove('pin-selected')
+                    console.log("Removing Modal");
                     removeModal()
                 } else {
                     var selectedPins = svgDOM.querySelectorAll('.pin-selected')
@@ -129,8 +132,8 @@ function addPinToLoc(roomNumber) {
                     }
                     clickedElementGroup.classList.add('pin-selected')
                     showModal(clickedElement.id)
+                    console.log("Showing modal")
                 }
-
             })
         }, false);
     }, false);
@@ -231,19 +234,18 @@ function showModal(id) {
 }
 
 function removeModal() {
+    currentClickedPin.classList.remove('pin-selected')
     modal.classList.add("show-modal");
 }
 
+
 window.onclick = function() {
-    removeModal();
+    removeModal()
 }
 
 function dispModal() {
     toggleSelectedPin();
     toggleModal();
-}
-
-function toggleSelectedPin() {
 }
 
 addLocationPins(1);

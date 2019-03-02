@@ -22,26 +22,26 @@
     </div>
 
     <div class="toggleButton">
-        <a href="#" class="toggle toggle--on" id="toggle" onclick="toggleFloors()" style="cursor:pointer;"></a>
+        <a href="#" class="toggle toggle--on" id="toggle" onclick="toggleFloors()" style="cursor:pointer;" ontouchstart="toggleFloors()"></a>
     </div>
 
     <div id="pins">
     </div>
     <div>
-        <div id="card" class="card modal show-modal">
-            <div class="additional">
-                <div class="event-card">
-                    <h2>Now</h2>
-                    <p id="current-event"></p>
+            <div id="card" class="card modal show-modal">
+                <div class="additional">
+                    <div class="event-card">
+                        <h2>Now</h2>
+                        <p id="current-event"></p>
+                    </div>
+                    <div class="more-info">
+                        <h2>Upcoming</h2>
+                        <div id="upcoming-events" style="white-space: pre-line"></div>
+                    </div>
                 </div>
-                <div class="more-info">
-                    <h2>Upcoming</h2>
-                    <div id="upcoming-events" style="white-space: pre-line"></div>
+                <div class="general">
                 </div>
             </div>
-            <div class="general">
-            </div>
-        </div>
     </div>
     <script src="js/util.js"></script>
 </body>
