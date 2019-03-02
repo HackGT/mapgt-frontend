@@ -22,8 +22,6 @@ for (event of events) {
     event.endTime = new Date("March 2, 2019 " + eventEndTime);
 }
 
-console.log(events);
-
 var rooms = [
     {
         "number": 103,
@@ -78,6 +76,11 @@ var rooms = [
         "name": "",
         "floor": 2,
         "image": ""
+    },
+    {
+        "number": 100,
+        "name": "Common Area",
+        "floor": 1
     }
 ]
 
@@ -131,6 +134,7 @@ function addPinToLoc(roomNumber) {
                         selectedPins[i].classList.remove('pin-selected')
                     }
                     clickedElementGroup.classList.add('pin-selected')
+                    console.log(clickedElement.id);
                     showModal(clickedElement.id)
                     console.log("Showing modal")
                 }
@@ -203,6 +207,7 @@ function toggleModal() {
 
 function showModal(id) {
     // This is hacky as heck but hopefully it'll do for now
+    console.log("id" +  id);
     var roomNumber = id.replace(/\D/g, ""); // Stripping the text and leaving only the room number from the HTML element ID passed into this method
     var eventsInRoom = events.filter(event => event.location === roomNumber);
     var now = new Date(Date.now());

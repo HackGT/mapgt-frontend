@@ -27,7 +27,7 @@
         "name": "Marshmallow Tower Competition",
         "startTime": "14:30:00",
         "endTime": "15:30:00",
-        "location": "Common Area"
+        "location": "100"
     },
     {
         "name": "Mid-day Snack",
@@ -39,7 +39,7 @@
         "name": "Cardboard Costumes Competition",
         "startTime": "18:00:00",
         "endTime": "19:00:00",
-        "location": "Common Area"
+        "location": "100"
     },
     {
         "name": "Dinner",
@@ -63,7 +63,7 @@
         "name": "Wire Stripping Competition",
         "startTime": "21:30:00",
         "endTime": "22:30:00",
-        "location": "Common Area"
+        "location": "100"
     },
     {
         "name": "Evening Snack",
