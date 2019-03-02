@@ -18,9 +18,11 @@ $.getJSON({
 for (event of events) {
     var eventStartTime = event.startTime;
     var eventEndTime = event.endTime;
-    event.startTime = new Date("March 2, 2019" + eventStartTime);
+    event.startTime = new Date("March 2, 2019 " + eventStartTime);
     event.endTime = new Date("March 2, 2019 " + eventEndTime);
 }
+
+console.log(events);
 
 var rooms = [
     {
@@ -31,12 +33,6 @@ var rooms = [
     },
     {
         "number": 105,
-        "name": "",
-        "floor": 1,
-        "image": ""
-    },
-    {
-        "number": 109,
         "name": "",
         "floor": 1,
         "image": ""
@@ -101,6 +97,7 @@ function addPinToLoc(roomNumber) {
     var floorNumber = parseInt(stringRoomNumber.charAt(0));
     var floorElement = floorNumber == 2 ? secondFloor : firstFloor;
     floorElement.addEventListener("load", () => {
+        console.log("Rooom Number", roomNumber);
         var svgDOM = floorElement.contentDocument.children[0]
         var matchingTextNodes = Array.from(svgDOM.querySelectorAll('text'))
             .find(el => el.textContent.trim() === stringRoomNumber.trim());
@@ -126,7 +123,6 @@ function addPinToLoc(roomNumber) {
                 currentClickedPin = clickedElementGroup;
                 if (clickedElementGroup.classList.contains('pin-selected')) {
                     clickedElementGroup.classList.remove('pin-selected')
-                    console.log("Removing Modal");
                     removeModal()
                 } else {
                     var selectedPins = svgDOM.querySelectorAll('.pin-selected')
@@ -135,8 +131,7 @@ function addPinToLoc(roomNumber) {
                     }
                     clickedElementGroup.classList.add('pin-selected')
                     console.log(clickedElement.id);
-                    showModal(clickedElement.id)
-                    console.log("Showing modal")
+                    showModal(clickedElement.id);
                 }
             })
         }, false);
@@ -207,7 +202,6 @@ function toggleModal() {
 
 function showModal(id) {
     // This is hacky as heck but hopefully it'll do for now
-    console.log("id" +  id);
     var roomNumber = id.replace(/\D/g, ""); // Stripping the text and leaving only the room number from the HTML element ID passed into this method
     var eventsInRoom = events.filter(event => event.location === roomNumber);
     var now = new Date(Date.now());
@@ -216,7 +210,7 @@ function showModal(id) {
     var eventsInNextHour = eventsInRoom.filter(event => event.startTime > now && event.startTime < oneHourFromNow); // All events whose start times are within an hour from when the pin is clicked
     var eventDisplay = document.querySelector("#current-event");
     var upcomingEventsDisplay = document.querySelector("#upcoming-events");
-
+    console.log(eventsInRoom);
     if (eventsRightNow.length === 0) {
         eventDisplay.textContent = "None right now";
     } else {
