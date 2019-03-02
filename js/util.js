@@ -17,7 +17,7 @@ $.getJSON({
 for (event of events) {
     var eventStartTime = event.startTime;
     var eventEndTime = event.endTime;
-    event.startTime = new Date("March 2, 2019" + eventStartTime);
+    event.startTime = new Date("March 2, 2019 " + eventStartTime);
     event.endTime = new Date("March 2, 2019 " + eventEndTime);
 }
 
