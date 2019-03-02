@@ -60,69 +60,9 @@
         "location": "201"
     },
     {
-        "name": "Wire Stripping Competition",
-        "startTime": "21:30:00",
-        "endTime": "22:30:00",
-        "location": "100"
-    },
-    {
         "name": "Evening Snack",
         "startTime": "22:00:00",
         "endTime": "23:00:00",
         "location": "201"
-    },
-    {
-        "name": "Bootcamp: Workshop 1",
-        "startTime": "10:30:00",
-        "endTime": "11:15:00",
-        "location": "215"
-    },
-    {
-        "name": "Devices: Workshop 1",
-        "startTime": "11:00:00",
-        "endTime": "11:45:00",
-        "location": "103"
-    },
-    {
-        "name": "Robotics: Workshop 1",
-        "startTime": "13:00:00",
-        "endTime": "13:45:00",
-        "location": "103"
-    },
-    {
-        "name": "Bootcamp: Workshop 2",
-        "startTime": "13:30:00",
-        "endTime": "14:15:00",
-        "location": "215"
-    },
-    {
-        "name": "Devices: Workshop 2",
-        "startTime": "14:00:00",
-        "endTime": "14:45:00",
-        "location": "211"
-    },
-    {
-        "name": "Robotics: Workshop 2",
-        "startTime": "15:30:00",
-        "endTime": "16:15:00",
-        "location": "211"
-    },
-    {
-        "name": "Bootcamp: Workshop 3",
-        "startTime": "16:00:00",
-        "endTime": "16:45:00",
-        "location": "215"
-    },
-    {
-        "name": "Devices: Workshop 3",
-        "startTime": "16:30:00",
-        "endTime": "17:15:00",
-        "location": "211"
-    },
-    {
-        "name": "Robotics: Workshop 3",
-        "startTime": "17:30:00",
-        "endTime": "18:15:00",
-        "location": "211"
     }
 ]
