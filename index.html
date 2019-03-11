@@ -9,6 +9,7 @@
     <link href="css/toggle.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <meta name="viewport" content="initial-scale=1, minimum-scale=1">
+    <script type="text/javascript" src="./js/snap.svg.js"></script>
 </head>
 
 <body>
@@ -16,18 +17,20 @@
     <h1 class="alignleft">BuildGT 2</h1>
     <h1 class="alignright">MapGT</h1>
 
-    <div class="maps">
+    <div id="svg">
+    </div>
+    <script type="text/javascript" src="./js/index.js"></script>
+
+    <!-- <div class="maps">
         <object id="floor1" type="image/svg+xml" data="assets/maps/ICF1Edit.svg" style="display: block;"></object>
         <object id="floor2" type="image/svg+xml" data="assets/maps/ICF2Edit.svg" style="display: none;"></object>
-    </div>
+    </div> -->
 
-    <div class="toggleButton">
+    <!-- <div class="toggleButton">
         <a href="#" class="toggle toggle--on" id="toggle" onclick="toggleFloors()" style="cursor:pointer;" ontouchstart="toggleFloors()"></a>
-    </div>
+    </div> -->
 
-    <div id="pins">
-    </div>
-    <div>
+    <!-- <div>
             <div id="card" class="card modal show-modal">
                 <div class="additional">
                     <div class="event-card">
@@ -42,8 +45,8 @@
                 <div class="general">
                 </div>
             </div>
-    </div>
-    <script src="js/util.js"></script>
+    </div> -->
+    <!-- <script src="js/util.js"></script> -->
 </body>
 
 </html>
