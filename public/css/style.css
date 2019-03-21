@@ -34,11 +34,11 @@
 
 /* Set backgrounds */
 html::before {
-  background-image: url("https://build.hack.gt/assets/bg.png");
+  background-image: url("https://horizons.hack.gt/assets/Blobs.svg");
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
-  opacity: 0.8;
+  opacity: 0.3;
 
   content: "";
   position: fixed;
@@ -64,7 +64,7 @@ html, body, #sidebar-nav, section.main {
 /* Hide text and use image instead in the header */
 .alignleft {
   display: block;
-  background-image: url("https://build.hack.gt/assets/logo.svg");
+  background-image: url("https://horizons.hack.gt/assets/horizons-logo.png");
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;

@@ -13,40 +13,45 @@
 </head>
 
 <body>
-
-    <div class="standalone">
-        <h1 class="alignleft">BuildGT 2</h1>
-        <h1 class="alignright">MapGT</h1>
-    </div>
-
-    <div class="maps">
-        <object id="floor1" type="image/svg+xml" data="assets/maps/ICF1EditHorizons.svg" style="display: block;"></object>
-        <object id="floor2" type="image/svg+xml" data="assets/maps/ICF2EditHorizons.svg" style="display: none;"></object>
-    </div>
-
-    <div class="section toggleButton">
-        <button class="btn btn--floor1" onclick="tog1()">1st</button>
-        <button class="btn btn--floor2" onclick="tog2()">2nd</button>
-    </div>
-    
-    <div id="pins">
-    </div>
-    <div>
-        <div id="card" class="card modal show-modal">
-            <div class="additional">
-                <div class="event-card">
-                    <h2>Now</h2>
-                    <p id="current-event"></p>
-                </div>
-                <div class="more-info">
-                    <h2>Upcoming</h2>
-                    <div id="upcoming-events" style="white-space: pre-line"></div>
-                </div>
+    <div class="left-panel">
+            <div class="standalone">
+                <h1 class="alignleft">Horizons</h1>
+                <h1 class="alignright">MapGT</h1>
             </div>
-            <div class="general">
+        
+            <div class="maps">
+                <object id="floor1" type="image/svg+xml" data="assets/maps/ICF1EditHorizons.svg" style="display: block;"></object>
+                <object id="floor2" type="image/svg+xml" data="assets/maps/ICF2EditHorizons.svg" style="display: none;"></object>
+            </div>
+        
+            <div class="section toggleButton">
+                <button class="btn btn--floor1" onclick="tog1()">1st</button>
+                <button class="btn btn--floor2" onclick="tog2()">2nd</button>
+            </div>
+            
+            <div id="pins">
+            </div>
+    </div>
+
+    <div class="right-panel">
+        <div>
+            <div id="card" class="card modal show-modal">
+                <div class="additional">
+                    <div class="event-card">
+                        <h2>Now</h2>
+                        <p id="current-event"></p>
+                    </div>
+                    <div class="more-info">
+                        <h2>Upcoming</h2>
+                        <div id="upcoming-events" style="white-space: pre-line"></div>
+                    </div>
+                </div>
+                <div class="general">
+                </div>
             </div>
         </div>
     </div>
+    
     <script src="js/util.js"></script>
     <script src="js/snap.svg.js"></script>
     <script src="js/svgtest.js"></script>

@@ -2,6 +2,18 @@
     display: block;
 }
 
+.left-panel {
+    width: 74%;
+    float: left;
+}
+
+.right-panel {
+    background-color: #f6a786;
+    height: 725px;
+    float: right;
+    width: 25%;
+}
+
 #floor1, #floor2 {
     width: 100%;
     margin-left: auto;
@@ -26,7 +38,7 @@
     bottom: 15%;
     left: 48%;
     height: 80%;
-    transform: translateX(-50%);
+    transform: translateX(-75%);
 }
 
 @media (max-width:1200px) {
