@@ -1,3 +1,7 @@
+.standalone {
+    display: block;
+}
+
 #floor1, #floor2 {
     width: 100%;
     margin-left: auto;

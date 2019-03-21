@@ -164,33 +164,31 @@ function createPin(roomNumber, location) {
     return pin
 }
 
-function toggleFloors() {
-    // toggling between the maps for floors 1 and 2
-
-    if (firstFloor.style.display === "none") {
-        firstFloor.style.display = "block";
-        secondFloor.style.display = "none";
-        addLocationPins(1);
-    } else {
-        firstFloor.style.display = "none";
-        secondFloor.style.display = "block";
-        addLocationPins(2);
-    }
+function tog1() {
+    firstFloor.style.display = "block";
+    secondFloor.style.display = "none";
+    addLocationPins(1);
 }
 
-$('.toggle').click(function(e) {
-    var toggle = this;
+function tog2() {
+    firstFloor.style.display = "none";
+    secondFloor.style.display = "block";
+    addLocationPins(2);
+}
 
-    e.preventDefault();
+// $('.toggle').click(function(e) {
+//     var toggle = this;
 
-    $(toggle).toggleClass('toggle--on')
-            .toggleClass('toggle--off')
-            .addClass('toggle--moving');
+//     e.preventDefault();
 
-    setTimeout(function() {
-        $(toggle).removeClass('toggle--moving');
-    }, 200)
-});
+//     $(toggle).toggleClass('toggle--on')
+//             .toggleClass('toggle--off')
+//             .addClass('toggle--moving');
+
+//     setTimeout(function() {
+//         $(toggle).removeClass('toggle--moving');
+//     }, 200)
+// });
 
 // todo fix naming or something idk
 
