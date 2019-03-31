@@ -54,6 +54,7 @@
     /* make floor map centered */
     .maps {
         width: 65%;
+        left: 53%;
     }
 }
 
@@ -62,6 +63,7 @@
     /* make floor map centered */
     .maps {
         width: 66%;
+        left: 53%;
     }
 }
 
@@ -70,6 +72,7 @@
     /* make floor map centered */
     .maps {
         width: 80%;
+        left: 58%;
     }
 }
 
@@ -78,6 +81,7 @@
     /* make floor map centered */
     .maps {
         width: 90%;
+        left: 53%;
     }
 }
 

@@ -15,6 +15,43 @@
   position: absolute;
 }
 
+
+@media (max-width:1300px) {
+  .toggleButton {
+      transform: translateX(-135%);
+  }
+}
+
+@media (max-width:1200px) {
+  .toggleButton {
+      transform: translateX(-130%);
+  }
+}
+
+@media (max-width:1000px) {
+  .toggleButton {
+      transform: translateX(-100%);
+  }
+}
+
+@media (max-width:800px) {
+  .toggleButton {
+      transform: translateX(-95%);
+  }
+}
+
+@media (max-width:600px) {
+  .toggleButton {
+      transform: translateX(-77%);
+  }
+}
+
+@media (max-width:400px) {
+  .toggleButton {
+      transform: translateX(-90%);
+  }
+}
+
 .event-card {
   transform: translate(110%, 30%);
 }

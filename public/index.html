@@ -13,25 +13,23 @@
 </head>
 
 <body>
-    <div class = "leftbackground">
-        <div class="left-panel">
-            <div class="standalone">
-                <h1 class="alignleft">Horizons</h1>
-                <h1 class="alignright">MapGT</h1>
-            </div>
+    <div class="left-panel">
+        <div class="standalone">
+            <h1 class="alignleft">Horizons</h1>
+            <h1 class="alignright">MapGT</h1>
+        </div>
+    
+        <div class="maps">
+            <object id="floor1" type="image/svg+xml" data="assets/maps/ICF1EditHorizons.svg" style="display: block;"></object>
+            <object id="floor2" type="image/svg+xml" data="assets/maps/ICF2EditHorizons.svg" style="display: none;"></object>
+        </div>
+    
+        <div class="section toggleButton">
+            <button class="btn btn--floor1" onclick="tog1()">1st</button>
+            <button class="btn btn--floor2" onclick="tog2()">2nd</button>
+        </div>
         
-            <div class="maps">
-                <object id="floor1" type="image/svg+xml" data="assets/maps/ICF1EditHorizons.svg" style="display: block;"></object>
-                <object id="floor2" type="image/svg+xml" data="assets/maps/ICF2EditHorizons.svg" style="display: none;"></object>
-            </div>
-        
-            <div class="section toggleButton">
-                <button class="btn btn--floor1" onclick="tog1()">1st</button>
-                <button class="btn btn--floor2" onclick="tog2()">2nd</button>
-            </div>
-            
-            <div id="pins">
-            </div>
+        <div id="pins">
         </div>
     </div>
 
