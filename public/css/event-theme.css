@@ -26,7 +26,6 @@
 /* CSS variables for colors */
 :root {
   --bg-color: #FFFFFE;
-  --text-color: #4A4A4A;
   --dark-blue: #036BFF;
   --light-blue: #8FBEFF;
   --blur: rgba(255, 255, 255, 0.6);
@@ -57,7 +56,6 @@ section.main {
 }
 
 html, body, #sidebar-nav, section.main {
-  color: var(--text-color);
   font-family: "Space Mono", sans-serif;
 }
 
@@ -81,14 +79,10 @@ html, body, #sidebar-nav, section.main {
 }
 
 #sidebar-nav > a, #sidebar, .editor-toolbar > a {
-  color: var(--text-color);
   border: none;
   text-decoration: initial;
   font-family: "Space Mono";
   font-weight: bold;
-}
-.editor-toolbar > a {
-  color: var(--text-color) !important;
 }
 
 .editor-toolbar a.active, .editor-toolbar a:hover {
@@ -100,7 +94,6 @@ html, body, #sidebar-nav, section.main {
   border-color: var(--light-blue);
 }
 a {
-  color: var(--text-color);
   text-decoration: none;
   border-bottom: 1px dotted;
   cursor: pointer;
@@ -110,7 +103,6 @@ a:hover {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  color: var(--text-color);
 }
 
 #email-rendered {
@@ -136,7 +128,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 code {
-  color: var(--text-color);
 }
 
 ul {
@@ -151,7 +142,6 @@ section.main > div > p:first-of-type {
 /* Form elements */
 input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]), select, fieldset, textarea {
   background-color: var(--blur);
-  color: var(--text-color);
   border-color: var(--light-blue);
 }
 input, label {

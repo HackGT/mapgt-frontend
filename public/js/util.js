@@ -114,21 +114,21 @@ function addPinToLoc(roomNumber) {
             pinDOM.setAttribute("x", xpos);
             pinDOM.setAttribute("y", ypos);
             svgDOM.appendChild(pinDOM);
-            pinDOM.id = "room-" + roomNumber
+            pinDOM.id = "room-" + roomNumber;
             pinDOM.addEventListener("click", function(e) {
-                var clickedElement = getTopLevelOfPin(e.target)
-                var clickedElementGroup = clickedElement.getElementsByTagName('g')[0]
+                var clickedElement = getTopLevelOfPin(e.target);
+                var clickedElementGroup = clickedElement.getElementsByTagName('g')[0];
 
                 if (clickedElementGroup.classList.contains('pin-selected')) {
-                    clickedElementGroup.classList.remove('pin-selected')
-                    removeModal()
+                    clickedElementGroup.classList.remove('pin-selected');
+                    removeModal();
                 } else {
-                    var selectedPins = svgDOM.querySelectorAll('.pin-selected')
+                    var selectedPins = svgDOM.querySelectorAll('.pin-selected');
                     for (var i = 0; i < selectedPins.length; i++) {
-                        selectedPins[i].classList.remove('pin-selected')
+                        selectedPins[i].classList.remove('pin-selected');
                     }
-                    clickedElementGroup.classList.add('pin-selected')
-                    showModal(clickedElement.id)
+                    clickedElementGroup.classList.add('pin-selected');
+                    showModal(clickedElement.id);
                 }
 
             })
@@ -138,9 +138,9 @@ function addPinToLoc(roomNumber) {
 
 function getTopLevelOfPin(arbitraryPinElement) {
     while (arbitraryPinElement.tagName != "svg") {
-        arbitraryPinElement = arbitraryPinElement.parentNode
+        arbitraryPinElement = arbitraryPinElement.parentNode;
     }
-    return arbitraryPinElement
+    return arbitraryPinElement;
 }
 
 function setPinAttributes(pin, roomNumber, location) {
@@ -161,7 +161,7 @@ function createPin(roomNumber, location) {
 
     var pin = document.createElement("object");
     setPinAttributes(pin, roomNumber, location);
-    return pin
+    return pin;
 }
 
 function tog1() {
@@ -176,26 +176,6 @@ function tog2() {
     var element = document.getElementById("removeactive");
     element.classList.remove("active");
     addLocationPins(2);
-}
-
-// $('.toggle').click(function(e) {
-//     var toggle = this;
-
-//     e.preventDefault();
-
-//     $(toggle).toggleClass('toggle--on')
-//             .toggleClass('toggle--off')
-//             .addClass('toggle--moving');
-
-//     setTimeout(function() {
-//         $(toggle).removeClass('toggle--moving');
-//     }, 200)
-// });
-
-// todo fix naming or something idk
-
-function toggleModal() {
-    modal.classList.toggle("show-modal");
 }
 
 function showModal(id) {

@@ -1,0 +1,216 @@
+.standalone {
+    display: block;
+}
+
+/* MAP */
+
+.left-panel {
+    width: 74%;
+    float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+#floor1, #floor2 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%
+}
+
+#floor2 {
+    display: none;
+}
+
+.maps {
+    position: absolute;
+    width: 50%;
+    /* top: 50%; */
+    bottom: 15%;
+    left: 48%;
+    height: 80%;
+    transform: translateX(-75%);
+}
+
+@media (max-width:1200px) {
+    .maps {
+        width: 55%;
+    }
+}
+
+@media (max-width:1000px) {
+    .maps {
+        width: 65%;
+        left: 53%;
+    }
+}
+
+@media (max-width:800px) {
+    .maps {
+        width: 66%;
+        left: 53%;
+    }
+}
+
+@media (max-width:600px) {
+    .maps {
+        width: 80%;
+        left: 58%;
+    }
+}
+
+@media (max-width:400px) {
+    .maps {
+        width: 90%;
+        left: 53%;
+    }
+}
+
+/* INFO PANEL */
+
+.alignleft {
+	float: left;
+}
+
+.right-panel {
+    background-color: #f6a786;
+    height: 725px;
+    float: right;
+    width: 25%;
+    border: solid; 
+}
+
+.event-card {
+    transform: translate(4%, 15%);
+}
+
+.event-card h2 {
+    color: white;
+}
+
+.more-info {
+    transform: translate(4%, 100%);
+    width: 90%;
+}
+
+.more-info h2 {
+    color: black;
+}
+
+.additional {
+    transform: translateY(-8%)
+}
+
+.toppanel {
+    width: 100%;
+    height: 330px;
+}
+
+.bottompanel {
+    width: 100%;
+    height: 350px;
+}
+
+.marker {
+    position: absolute;
+}
+
+.marker-extension {
+    display: block;
+    float: left;
+}
+
+/* PINS */
+
+#pins {
+    opacity: 0;
+}
+
+.location-pin {
+    position: absolute;
+    display: block;
+    float: left;
+}
+
+.location-pin:hover {
+    cursor: ;
+}
+
+/* TOGGLE BUTTON */
+
+.toggleButton {
+  bottom: 5%;
+  left: 52%;
+  transform: translateX(-140%);
+  position: absolute;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    margin: 1em;
+    padding: 1em 2em;
+    border: 0;
+    border-radius: 30px;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #42626d;
+}
+  
+.btn:hover {
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn:focus {
+    outline: none;
+    background-color: #f6a786;
+}
+
+.btn.active {
+    background-color:#f6a786;
+}
+
+@media (max-width:1300px) {
+  .toggleButton {
+      transform: translateX(-135%);
+  }
+}
+
+@media (max-width:1200px) {
+  .toggleButton {
+      transform: translateX(-130%);
+  }
+}
+
+@media (max-width:1000px) {
+  .toggleButton {
+      transform: translateX(-100%);
+  }
+}
+
+@media (max-width:800px) {
+  .toggleButton {
+      transform: translateX(-95%);
+  }
+}
+
+@media (max-width:600px) {
+  .toggleButton {
+      transform: translateX(-77%);
+  }
+}
+
+@media (max-width:400px) {
+  .toggleButton {
+      transform: translateX(-90%);
+  }
+}
