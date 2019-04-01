@@ -173,6 +173,8 @@ function tog1() {
 function tog2() {
     firstFloor.style.display = "none";
     secondFloor.style.display = "block";
+    var element = document.getElementById("removeactive");
+    element.classList.remove("active");
     addLocationPins(2);
 }
 
