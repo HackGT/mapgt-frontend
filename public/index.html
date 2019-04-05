@@ -17,39 +17,50 @@
             <h1 class="alignleft">Horizons</h1>
             <h1 class="alignright">MapGT</h1>
         </div>
-    
-        <div class="maps">
-            <object id="floor1" type="image/svg+xml" data="assets/maps/ICF1EditHorizons.svg" style="display: block;"></object>
-            <object id="floor2" type="image/svg+xml" data="assets/maps/ICF2EditHorizons.svg" style="display: none;"></object>
-        </div>
-    
+
         <div class="section toggleButton">
             <button class="btn btn--floor1 active" id="removeactive" onclick="tog1()">1st</button>
             <button class="btn btn--floor2" onclick="tog2()">2nd</button>
         </div>
-        
-        <div id="pins">
-        </div>
     </div>
 
-    <div class="right-panel">
+    <!-- <div class="right-panel">
         <div>
            <div class="toppanel">
                 <div class="event-card">
                     <h2>Now</h2>
-                    <p id="current-event"></p>
+                    <div class="now">
+                        <h1>Hi there</h1>
+                    </div>
                 </div>
             </div>
             <div class="bottompanel">
-            <div class="more-info">
                 <h2>Upcoming</h2>
-                <div id="upcoming-events" style="white-space: pre-line"></div>
+                <div class="upcoming">
+                    <h1>Bye bye</h1>
+                </div>
             </div>
+        </div>
+    </div> -->
+
+    <div class="right-panel">
+        <div class="now">
+            <h1>Now</h1>
+            <div id="now-card" class="card">
+
+            </div>
+        </div>
+        <div class="upcoming">
+            <h1>Upcoming</h1>
+            <div id="upcoming-card" class="card">
+
             </div>
         </div>
     </div>
-    
+
     <script src="js/util.js"></script>
+    <script src="js/snap.svg.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

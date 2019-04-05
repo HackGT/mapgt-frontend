@@ -1,0 +1,21 @@
+{
+    "inner_border": {
+        "stroke": "#DC834B"
+    },
+    "outer_border": {
+        "stroke": "#42626D",
+        "fill": "#EBAA8C"
+    },
+    "icon": {
+        "stroke": "#DC834B",
+        "fill": "#00FFFF"
+    },
+    "room_text": {
+        "fill": "#000000",
+        "stroke": "#000000",
+        "font-family": "Verdana"
+    },
+    "room_hover_fill": "#F0D76D",
+    "room_fill": "#EBAA8C",
+    "text_hover_fill": "#49616C"
+}

@@ -169,4 +169,3 @@ input:disabled, textarea:disabled {
 input:disabled::placeholder {
   color: var(--bg-color);
 }
-

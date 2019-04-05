@@ -82,16 +82,6 @@ var rooms = [
     }
 ]
 
-function addLocationPins(floor) {
-    // adds location pins to all the rooms for the given floor
-
-    for (let i = 0; i < rooms.length; i += 1) {
-        if (rooms[i]["floor"] === floor) {
-            addPinToLoc(rooms[i]["number"]);
-        }
-    }
-}
-
 function addPinToLoc(roomNumber) {
     // adds a location pin for the specified room number in the map
 
@@ -138,33 +128,8 @@ function addPinToLoc(roomNumber) {
     }, false);
 }
 
-function getTopLevelOfPin(arbitraryPinElement) {
-    while (arbitraryPinElement.tagName != "svg") {
-        arbitraryPinElement = arbitraryPinElement.parentNode;
-    }
-    return arbitraryPinElement;
-}
 
-function setPinAttributes(pin, roomNumber, location) {
-    // setting attributes for the pin element to be added
 
-    var attributes = {
-        "id": roomNumber,
-        "type": "image/svg+xml",
-        "data": "assets/locationPin.svg",
-    }
-    for (let key in attributes) {
-        pin.setAttribute(key, attributes[key]);
-    }
-}
-
-function createPin(roomNumber, location) {
-    // creates a pin element that will be added to the map svg
-
-    var pin = document.createElement("object");
-    setPinAttributes(pin, roomNumber, location);
-    return pin;
-}
 
 function tog1() {
     firstFloor.style.display = "block";
@@ -179,53 +144,3 @@ function tog2() {
     element.classList.remove("active");
     addLocationPins(2);
 }
-
-function showModal(id) {
-    // This is hacky as heck but hopefully it'll do for now
-    var roomNumber = id.replace(/\D/g, ""); // Stripping the text and leaving only the room number from the HTML element ID passed into this method
-    var eventsInRoom = events.filter(event => event.location === roomNumber);
-    var now = new Date(Date.now());
-    var oneHourFromNow = new Date(now.getTime() + 3600000);
-    var eventsRightNow = eventsInRoom.filter(event => event.startTime < now && event.endTime > now); // All events happening right now
-    var eventsInNextHour = eventsInRoom.filter(event => event.startTime > now && event.startTime < oneHourFromNow); // All events whose start times are within an hour from when the pin is clicked
-    var eventDisplay = document.querySelector("#current-event");
-    var upcomingEventsDisplay = document.querySelector("#upcoming-events");
-
-    if (eventsRightNow.length === 0) {
-        eventDisplay.textContent = "None right now";
-    } else {
-        eventDisplay.textContent = "- " + eventsRightNow[0].name;
-    }
-
-    if (eventsInNextHour.length === 0) {
-        upcomingEventsDisplay.textContent = "None in the next hour. Stay tuned!";
-    } else {
-        upcomingEventsDisplay.textContent = "";
-
-        for (event of eventsInNextHour) {
-            eventStartTimeString = event.startTime.toLocaleTimeString("en-us", { hour: "numeric", minute: "2-digit" });
-            upcomingEventsDisplay.textContent += "- " + event.name + " (" + eventStartTimeString + ")";
-            upcomingEventsDisplay.textContent += "\n";
-        }
-    }
-
-    modal.classList.remove("show-modal");
-}
-
-function removeModal() {
-    modal.classList.add("show-modal");
-}
-
-window.onclick = function() {
-    removeModal();
-}
-
-function dispModal() {
-    toggleSelectedPin();
-    toggleModal();
-}
-
-function toggleSelectedPin() {
-}
-
-addLocationPins(1);
