@@ -11,17 +11,19 @@ $.getJSON({
     async: false
 }, function(data) {
     events = data;
+
+    // Transforming the start and end times into date objects
+    for (event of events) {
+        var eventStartTime = event.startTime;
+        var eventEndTime = event.endTime;
+        event.startTime = new Date(eventStartTime);
+        event.endTime = new Date(eventEndTime);
+    }
+
+    events = events.sort(function(a, b){return a.startTime - b.startTime})
+
+    console.log(events)
 });
-
-// Transforming the start and end times into date objects
-for (event of events) {
-    var eventStartTime = event.startTime;
-    var eventEndTime = event.endTime;
-    event.startTime = new Date("March 2, 2019" + eventStartTime);
-    event.endTime = new Date("March 2, 2019 " + eventEndTime);
-}
-
-console.log(events);
 
 var rooms = [
     {
