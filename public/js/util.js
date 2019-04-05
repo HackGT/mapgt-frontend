@@ -144,3 +144,92 @@ function tog2() {
     element.classList.remove("active");
     addLocationPins(2);
 }
+<<<<<<< HEAD
+=======
+
+function updateUpcomingEvents() {
+    var now = new Date(Date.now());
+    var oneHourFromNow = new Date(now.getTime() + 3600000);
+    var eventsRightNow = events.filter(event => event.startTime < now && event.endTime > now); // All events happening right now
+    var eventsInNextHour = events.filter(event => event.startTime > now && event.startTime < oneHourFromNow); // All events whose start times are within an hour from when the pin is clicked
+    var eventDisplay = document.querySelector("#current-event");
+    var upcomingEventsDisplay = document.querySelector("#upcoming-events");
+
+    if (eventsRightNow.length === 0) {
+        eventDisplay.textContent = "None right now";
+    } else {
+        for (event of eventsRightNow) {
+            eventStartTimeString = event.startTime.toLocaleTimeString("en-us", { hour: "numeric", minute: "2-digit" });
+            eventDisplay.textContent += "- " + event.name + " (" + eventStartTimeString + ")";
+            eventDisplay.textContent += "\n";
+        }
+    }
+
+    if (eventsInNextHour.length === 0) {
+        upcomingEventsDisplay.textContent = "None in the next hour. Stay tuned!";
+    } else {
+        upcomingEventsDisplay.textContent = "";
+
+        for (event of eventsInNextHour) {
+            eventStartTimeString = event.startTime.toLocaleTimeString("en-us", { hour: "numeric", minute: "2-digit" });
+            upcomingEventsDisplay.textContent += "- " + event.name + " (" + eventStartTimeString + ")";
+            upcomingEventsDisplay.textContent += "\n";
+        }
+    }
+
+    modal.classList.remove("show-modal");
+}
+
+function showModal(id) {
+    // This is hacky as heck but hopefully it'll do for now
+    var roomNumber = id.replace(/\D/g, ""); // Stripping the text and leaving only the room number from the HTML element ID passed into this method
+    var eventsInRoom = events.filter(event => event.location === roomNumber);
+    var now = new Date(Date.now());
+    var oneHourFromNow = new Date(now.getTime() + 3600000);
+    var eventsRightNow = eventsInRoom.filter(event => event.startTime < now && event.endTime > now); // All events happening right now
+    var eventsInNextHour = eventsInRoom.filter(event => event.startTime > now && event.startTime < oneHourFromNow); // All events whose start times are within an hour from when the pin is clicked
+    var eventDisplay = document.querySelector("#current-event");
+    var upcomingEventsDisplay = document.querySelector("#upcoming-events");
+
+    if (eventsRightNow.length === 0) {
+        eventDisplay.textContent = "None right now";
+    } else {
+        eventDisplay.textContent = "- " + eventsRightNow[0].name;
+    }
+
+    if (eventsInNextHour.length === 0) {
+        upcomingEventsDisplay.textContent = "None in the next hour. Stay tuned!";
+    } else {
+        upcomingEventsDisplay.textContent = "";
+
+        for (event of eventsInNextHour) {
+            eventStartTimeString = event.startTime.toLocaleTimeString("en-us", { hour: "numeric", minute: "2-digit" });
+            upcomingEventsDisplay.textContent += "- " + event.name + " (" + eventStartTimeString + ")";
+            upcomingEventsDisplay.textContent += "\n";
+        }
+    }
+
+    modal.classList.remove("show-modal");
+}
+
+function removeModal() {
+    modal.classList.add("show-modal");
+}
+
+window.onclick = function() {
+    removeModal();
+}
+
+function dispModal() {
+    toggleSelectedPin();
+    toggleModal();
+}
+
+function toggleSelectedPin() {
+}
+
+addLocationPins(1);
+
+updateUpcomingEvents()
+setInterval(updateUpcomingEvents, 5 * 60 * 1000)
+>>>>>>> 86f6284b6b0416fc11364b8545ae3cd7e84ba18d
