@@ -3,7 +3,7 @@ var secondFloor = document.getElementById("floor2");
 var modal = document.querySelector('.modal');
 var modalOverlay = document.querySelector('.modal-overlay');
 
-var events;
+var events = [];
 
 // An AJAX request to get the data from the event-data.json file and parsing it
 $.getJSON({

@@ -55,6 +55,11 @@ section.main {
   background-color: var(--blur);
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 html, body, #sidebar-nav, section.main {
   font-family: "Space Mono", sans-serif;
 }
