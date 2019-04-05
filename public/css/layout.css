@@ -74,20 +74,25 @@
 
 /* INFO PANEL */
 
+#upcoming-events, #current-event {
+  white-space: pre-line;
+}
+
 .alignleft {
 	float: left;
 }
 
 .right-panel {
     background-color: #f6a786;
-    height: 725px;
+    min-height: 100vh;
     float: right;
     width: 25%;
-    border: solid; 
+    border: solid #42626d;
+    box-sizing: border-box;
 }
 
-.event-card {
-    transform: translate(4%, 15%);
+.event-card, .more-info {
+    padding: 1em;
 }
 
 .event-card h2 {
@@ -95,8 +100,6 @@
 }
 
 .more-info {
-    transform: translate(4%, 100%);
-    width: 90%;
 }
 
 .more-info h2 {
@@ -107,14 +110,8 @@
     transform: translateY(-8%)
 }
 
-.toppanel {
+.toppanel, .bottompanel {
     width: 100%;
-    height: 330px;
-}
-
-.bottompanel {
-    width: 100%;
-    height: 350px;
 }
 
 .marker {
